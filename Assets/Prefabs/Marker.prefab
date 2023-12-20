@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7820126868517913902}
   - component: {fileID: 458409011986816060}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8258305300613859720}
   - component: {fileID: 3504707052270022336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,3 +130,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 458409011986816060}
+  _linePrefab: {fileID: -8651205479321935180, guid: 7439a29a2cdbd7242a52a70fa7d6342c, type: 3}

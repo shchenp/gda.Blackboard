@@ -6,6 +6,9 @@ using UnityEngine;
 public class Marker : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
+    [SerializeField] private Line _linePrefab;
+
+    private Line _currentLine;
 
     public void SetColor(Color color)
     {
@@ -15,6 +18,27 @@ public class Marker : MonoBehaviour
         }
         
         _renderer.color = color;
+    }
+
+    public void DrawNewLine()
+    {
+        if (!gameObject.activeSelf)
+        {
+            return;
+        }
+        
+        _currentLine = Instantiate(_linePrefab, transform);
+        _currentLine.SetColor(_renderer.color);
+    }
+
+    public void Draw()
+    {
+        if (!gameObject.activeSelf)
+        {
+            return;
+        }
+        
+        _currentLine.SetNewPoint(transform.localPosition);
     }
 
     public void FollowMouse(Vector3 position)

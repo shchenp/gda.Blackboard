@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Marker _marker;
     
     private Camera _camera;
-    private float _depth = -9;
+    private float _depth = 0;
 
     private void Awake()
     {
@@ -19,6 +19,16 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         SetMarkerMousePosition();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            _marker.DrawNewLine();
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            _marker.Draw();
+        }
     }
 
     public void SetMarkerColor(Image image)
