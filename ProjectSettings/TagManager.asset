@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Personal
+  - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Blackboard
+  - Lines
+  - Buttons
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Blackboard
+    uniqueID: 1803392967
+    locked: 0
+  - name: Lines
+    uniqueID: 4012495559
+    locked: 0
+  - name: Buttons
+    uniqueID: 2951006819
     locked: 0

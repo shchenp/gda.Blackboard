@@ -7,7 +7,7 @@ public class Line : MonoBehaviour
 {
     [SerializeField] private LineRenderer _renderer;
 
-    private float _depth;
+    private float _depth = 110;
 
     public void SetColor(Color color)
     {

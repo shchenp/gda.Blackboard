@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Marker _marker;
     
     private Camera _camera;
-    private float _depth = 0;
+    private float _depth;
 
     private void Awake()
     {
