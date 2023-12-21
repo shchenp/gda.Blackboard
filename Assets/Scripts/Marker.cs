@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Marker : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private Line _linePrefab;
+    [SerializeField] private UnityEvent<Line> _onLineAwake;
 
     private Line _currentLine;
 
@@ -29,6 +31,7 @@ public class Marker : MonoBehaviour
         
         _currentLine = Instantiate(_linePrefab, transform);
         _currentLine.SetColor(_renderer.color);
+        _onLineAwake.Invoke(_currentLine);
     }
 
     public void Draw()
